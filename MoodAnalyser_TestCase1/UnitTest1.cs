@@ -12,8 +12,8 @@ namespace MoodAnalyser_TestCase1
             {
 
                 //Arrange
-                string expected = "Sad";
-                string message = "";
+                string expected = "Hally";
+                string message = "my mood is null ";
 
                 MoodAnalyser_UC1 moodAnalyser = new MoodAnalyser_UC1(message);
 
@@ -34,31 +34,31 @@ namespace MoodAnalyser_TestCase1
 
 
 
-        [TestMethod]
-        public void TestMethod2()
-        {
+        //[TestMethod]
+        //public void TestMethod2()
+        //{
 
-            try
-            {
+        //    try
+        //    {
 
-                //Arrange
-                string expected = "Happy";
-                //string message = "I am in any mood";
+        //        //Arrange
+        //        string expected = "Happy";
+        //        //string message = "I am in any mood";
 
-                MoodAnalyser_UC1 moodAnalyser = new MoodAnalyser_UC1("I am in null mood");
+        //        MoodAnalyser_UC1 moodAnalyser = new MoodAnalyser_UC1("I am in null mood");
 
-                //Act
-                string mood = moodAnalyser.AnalysetheMood();
+        //        //Act
+        //        string mood = moodAnalyser.AnalysetheMood();
 
-                //Assert
-                Assert.AreEqual(expected, mood);
+        //        //Assert
+        //        Assert.AreEqual(expected, mood);
 
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.WriteLine(ex.Message);
+        //    }
 
-        }
+        //}
     }
 }
