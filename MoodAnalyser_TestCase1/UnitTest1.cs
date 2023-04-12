@@ -10,8 +10,8 @@ namespace MoodAnalyser_TestCase1
         {
 
             //Arrange
-            string expected = "Sad";
-            string message = "I am in sad mood";
+            string expected = "Happy";
+            string message = "I am in happy mood";
 
             MoodAnalyser_UC1 moodAnalyser = new MoodAnalyser_UC1(message);
 
