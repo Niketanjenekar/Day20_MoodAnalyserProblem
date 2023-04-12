@@ -10,10 +10,10 @@ namespace MoodAnalyser_TestCase1
         {
 
             //Arrange
-            string expected = "Happy";
-            string message = "I am in happy mood";
+            string expected = "Sad";
+            //string message = "I am in sad mood";
 
-            MoodAnalyser_UC1 moodAnalyser = new MoodAnalyser_UC1(message);
+            MoodAnalyser_UC1 moodAnalyser = new MoodAnalyser_UC1("I am in sad mood");
 
             //Act
             string mood = moodAnalyser.AnalysetheMood();
@@ -31,9 +31,9 @@ namespace MoodAnalyser_TestCase1
 
             //Arrange
             string expected = "Happy";
-            string message = "I am in any mood";
+            //string message = "I am in any mood";
 
-            MoodAnalyser_UC1 moodAnalyser = new MoodAnalyser_UC1(message);
+            MoodAnalyser_UC1 moodAnalyser = new MoodAnalyser_UC1("I am in any mood");
 
             //Act
             string mood = moodAnalyser.AnalysetheMood();
