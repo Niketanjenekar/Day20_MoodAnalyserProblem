@@ -18,22 +18,28 @@ namespace Day20_MoodAnalyserProblems
 
         public string AnalysetheMood()
         {
-            if (message.Contains("any"))
+            try
             {
-                return "Happy";
+                if (this.message.Equals(string.Empty))
+                {
+                    throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.EMPTY_MESSAGE, "Mood should not be null");
+                }
+                
+                else if (this.message.Contains("sad"))
+                {
+                    return "Sad";
+                }
+                else
+                {
+                    return "Happy";
+                }
+
             }
-            else if (message.Contains("happy"))
+            catch (NullReferenceException)
             {
-                return "Happy";
+                throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.NULL_MESSAGE, "Mood should not be null");
             }
-            else if (message.Contains("sad"))
-            {
-                return "Sad";
-            }
-            else
-            {
-                return "Can't Analyse your mood, i.e., Mood is Unkown";
-            }
+            
         }
     }
 }
